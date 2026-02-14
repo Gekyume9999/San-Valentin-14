@@ -19,7 +19,7 @@
     .player button{padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff}
     .player input[type=file]{display:none}
     .pill{position:fixed;top:10px;left:50%;transform:translateX(-50%);padding:6px 12px;border-radius:999px;
-          background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#fff;font:12px -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial}
+          background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#9d00ff;font:12px -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial}
     .error{position:fixed;inset:auto 10px 70px 10px;background:#260015;color:#ffd9f7;border:1px solid #ff8ae5;border-radius:10px;padding:10px;font:12px system-ui;display:none;}
   </style>
   <!-- Three.js legacy non-module build + OrbitControls (r128, super estable) -->
@@ -28,8 +28,8 @@
 </head>
 <body>
 <canvas id="galaxy-canvas"></canvas>
-<div class="pill">Te Amo Muchote Mis Ojitos Brillantes💛</div>
-<div class="attribution">Base: tlanex · Adaptación para Jotab 💫</div>
+<div class="pill">Te Amo Muchote Mis Ojitos Brillantes</div>
+<div class="attribution">Base: tlanex · Adaptación para Jotab </div>
 <div id="err" class="error"></div>
 
 <div class="player">
@@ -133,7 +133,7 @@ scene.add(bg);
 
 // Galaxy
 const galaxy = new THREE.Group(); scene.add(galaxy);
-const phrases = ["Pinchecha ✨", " Hermosa ", "Mi Bebe", "Fanylu", "Hermosota ✨", "Stefanie", "Mi Todo", "Me Encantas 🥰", " Perla 💫", "Te Amo💛", "Mi niña de ojitos cafe", "Mi dueña", "Mi Reina 👑", "Mi Amor", "Mi Mundo", "Mi Luz 🌠", "Mi Niña", "Mi Tesoro💛", "Mi Paz", "Mi Eterna", "Mi Sueño", "Mi Pensamiento Favorito", "Mi Bombom", "Mi Diosa", "Te Amo Stefanie"];
+const phrases = ["Pinchecha hermosha", " Te amo ", "Mi Bebe", "Fanylu", "Mi dueña", "Stefanie", "Mi Todo", "Me Encantas ", "FUFU", "Te Amo💛", "Mi niña de ojitos cafe", "Mi Mundo", "Mi Reina 👑", "Mi Amor", "Mi Mundo", "Mi Luz 🌠", "Mi Niña", "Mi Tesoro💛", "Mi Paz", "Mi Eterna", "Mi Sueño", "Mi Pensamiento Favorito", "Mi Bombom", "Mi Diosa", "Te Amo Stefanie"];
 const phraseCount = Math.max(phrases.length * 6, 180);
 const arms = 5, radius = 82, maxH = 22;
 
@@ -142,8 +142,8 @@ function makeTextTexture(text, size=48){
   const g=c.getContext('2d'); g.clearRect(0,0,c.width,c.height);
   g.font='800 '+size+'px -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial';
   g.textAlign='center'; g.textBaseline='middle';
-  g.shadowColor='rgba(210,140,255,0.95)'; g.shadowBlur=24;
-  g.fillStyle='rgba(255,240,255,0.98)'; g.fillText(text,c.width/2,c.height/2);
+  g.shadowColor='#9d00ff'; g.shadowBlur=24;
+  g.fillStyle='#ff4d4d'; g.fillText(text,c.width/2,c.height/2);
   return new THREE.CanvasTexture(c);
 }
 
@@ -250,6 +250,7 @@ function loopFx(){
 </script>
 </body>
 </html>
+
 
 
 
